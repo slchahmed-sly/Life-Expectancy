@@ -47,9 +47,11 @@ The analysis followed a rigorous data science pipeline:
 - **Education is Vital:** `Schooling` had one of the highest positive correlations with life expectancy.
 - **Economic Impact:** `GDP` and `Income composition of resources` are strong predictors of a longer life.
 - **Health Challenges:** `HIV/AIDS` and `Adult Mortality` have the strongest negative impact on life expectancy.
+
 <img width="731" height="637" alt="Screenshot 2026-01-18 at 22 52 26" src="https://github.com/user-attachments/assets/a24008d5-29e3-4e54-892d-35e45b06ed0c" />
 
 <img width="553" height="409" alt="Screenshot 2026-01-18 at 22 53 05" src="https://github.com/user-attachments/assets/0fa8271f-7d54-402a-8e21-eca9cfba7ebc" />
+
 ## How to Run
 1. Clone the repository:
 ```bash
