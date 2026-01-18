@@ -53,11 +53,11 @@ The analysis followed a rigorous data science pipeline:
 ## How to Run
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/slchahmed-sly/Life-Expectancy.git](https://github.com/slchahmed-sly/Life-Expectancy.git)
+      git clone [https://github.com/slchahmed-sly/Life-Expectancy.git](https://github.com/slchahmed-sly/Life-Expectancy.git)
 
 2. Install dependencies
    ```bash
-  pip install pandas numpy seaborn matplotlib scikit-learn scipy & jupyter notebook
+      pip install pandas numpy seaborn matplotlib scikit-learn scipy & jupyter notebook
 
 <img width="553" height="409" alt="Screenshot 2026-01-18 at 22 53 05" src="https://github.com/user-attachments/assets/0fa8271f-7d54-402a-8e21-eca9cfba7ebc" />
 
