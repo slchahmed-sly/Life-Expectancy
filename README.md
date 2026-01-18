@@ -55,7 +55,7 @@ The analysis followed a rigorous data science pipeline:
 ```bash
 git clone [https://github.com/slchahmed-sly/Life-Expectancy.git](https://github.com/slchahmed-sly/Life-Expectancy.git)
 ```
-3. Install dependencies
+2. Install dependencies
 ```bash
 pip install pandas numpy seaborn matplotlib scikit-learn scipy & jupyter notebook
 ```
