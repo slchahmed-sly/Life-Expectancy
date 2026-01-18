@@ -1,0 +1,97 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2820
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\froman\fcharset0 Times-Bold;
+\f3\froman\fcharset0 Times-Roman;\f4\fnil\fcharset0 HelveticaNeue-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red34\green33\blue33;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c17647\c17255\c17255;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs36 \cf0 \
+\ul Data Cleaning and Exploration:\
+\
+
+\f1\b0 \ulnone -first splitting the Dataset based on nature into four categories(socio\'85etc)\
+\
+-store the names of numerical features and categorical features.\
+\
+-cleaning missing Dataa.\
+\
+-Clean outliers using the IQR method\
+\
+
+\f0\b \ul Exploring Data and investigating variables' relationships:\
+1- 
+\f1\b0 \ulnone the first thing I poloted is the discribtion table of the dataset: and it showed that:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Distribution of Life Expectancy:
+\f3\b0  The mean life expectancy of 69.38 years provides a central tendency, while the standard deviation of 9.29 years highlights the significant variation in life expectancy across the dataset.\
+
+\f2\b Range of Life Expectancy:
+\f3\b0  The minimum life expectancy of 44.80 years and the maximum of 89 years underscore the substantial range of life expectancy observed.\
+
+\f2\b Quartiles as Distribution Markers:
+\f3\b0  The quartiles (25th percentile: 63.42 years, 50th percentile: 72.00 years, 75th percentile: 75.60 years) provide a clear picture of the distribution of life expectancy values within the dataset.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs36 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 -2 plotting the distribution of all the numerical columns, the result shows that approximately all the columns are not normally distributed. That may be coming from the fact that the data is gathered from different regions and countries rather than just one geographical point, a further investigation is needed to see the reason behind that.\
+the majority of the distributions are right-tailed, but with two of three that are left-tailed.\
+the distribution of the target variable is almost normal, but as the previous description table showed, the standard deviation is 9 instead of 1 or 2.\
+
+\f0\b \ul \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 \ulnone 3- I plotted a pie chart that shows the distribution of the status features:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f2\b\fs24 \cf0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Distribution of Country Status:
+\f3\b0  The pie chart reveals the distribution of countries within the dataset based on their development status.\
+\ls1\ilvl0
+\f2\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Majority of Developing Countries:
+\f3\b0  A substantial majority of countries in the dataset, 82.6%, are classified as "Developing."\
+\ls1\ilvl0
+\f2\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Minority of Developed Countries:
+\f3\b0  Only 17.4% of the countries in the dataset fall under the "Developed" category.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs36 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+4- I divided the main data frame into four sub-data frames (socio-economic_features, health-care-access_featrues\'85etc.). next, I plotted the correlation heatmap for all sub-data frames and showed that the socioeconomic factors have the highest correlation with the target variable. The features that have the highest correlation with the target variable are (schooling and income composition of resources) with a correlation of (0.85, 0.72), adult mortality and HIV/ AIDS came next with (-0.61, -0.78).\
+I also noticed a very high correlation between some predictors(schooling with income composition of resources, thinness 5-9 years with thinness 1- 19, Diphtheria with polio, and infant death with under-five deaths), but we can see that some features complete each other like thinness 1-19 covers some of 5-9 range which is 5-9 so it can be used alone But we will keep it. all disease features are highly correlated with each other but that is normal considering the nature of the countries those diseases are present in.\
+\
+5- I plotted the violin plot with status as the x-axis and life expectancy as the y-axis and colored by status. This plot showed that developing countries have a longer shape, stretching from 44.8 to 89, on the other hand, developed countries showed consistency, stretching from 69.9 to 89. this plot shows that the violin plot for developed countries is generally shifted toward higher life expectancy values compared to the \'93Developing\'94 countries. The violin plot of the developed countries has a larger width around its median of 79.2, although developing countries are more densely around the third quartile with Q3 of 74.\
+developed countries (Q1= 76.8 ,Q3 =81.7)\
+developing countries (Q1 = 61.5, Q3 = 74)\
+\
+5- a scatter plot showed the correlation between the predictors and the target variable. Many of the high positive correlation featurs with the target variable showd a trend of increasing with the target variabe, while other showed a negative correlation like HIV/ AIDS and adult mortality that decrease as life expectancy increases.\
+\
+5- This plot of earth, colored by life expectancy and the size of the  circles on the countries defined by the percentage expenditure feature: we can see that many countries with high total expenditure gave higher life expectancy values, with few special cases like (south africa and Equatorial Guinea) that have large circles that represent a larger percentage expenditure but with a low life expectancy values.\
+\
+\
+6- I plotted an earth picture showing the countries colored by the value of the target variable and animated by year. and this plot shows that Afghanistan and Africa in general, from Niger to South Africa, have the lowest Life expectancy from 2000 to 2015.\
+\
+7- I repeated the same plot again, but this time colored with HIV/ Aids. now, the colors follow an opposite direction than the previous plot. This shows that HIV/ Aids has a negative impact on life expectancy because the same countries that have the lowest life expectancy from the previous plot, now have the highest values.\
+\
+8-another plot colored with the income composition of resources showed the same pattern as the one colored with life expectancy, and that explains the positive correlation with the target variable.\
+\
+9- And finally, I plotted life expectancy over time using a line plot animated by countries. This plot showed that the majority of the countries\'92 life expectancy increased over time from 2000 to 2015\
+\
+- 
+\f0\b \ul preparation for training:
+\f1\b0 \ulnone \
+-use the clean label encoder to encode the categorical features, after that I used the Min-max scaler to scale all the features but the target variable. I choose the min-max scaler because of its compatibility with the Artificial neural network.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b\fs48 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 \
+}
